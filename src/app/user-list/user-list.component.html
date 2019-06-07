@@ -1,0 +1,11 @@
+<app-user-list-details
+  *ngIf="userPage"
+  [dataSource]="dataSource"
+  [displayedColumns]="displayedColumns"
+
+  [pageIndex]="userPage.page"
+  [pageSize]="userPage.per_page"
+  [length]="userPage.total"
+
+  (paginateEmitter)="handlePagination($event)">
+</app-user-list-details>
